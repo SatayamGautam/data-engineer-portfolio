@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azure Data Factory Pipeline | Satyam Gautam</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-surface">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">SG<span>.</span></a>
+      <nav class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle">☰</button>
+    </div>
+  </header>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section class="project-hero">
+      <div class="container">
+        <h1 class="project-title">Azure Data Factory Ingestion Pipeline</h1>
+        <p class="section-text">
+          A cloud-native pipeline built with Azure Data Factory to ingest data
+          from on-prem / external sources into Azure Data Lake and Synapse for
+          analytics and reporting.
+        </p>
+        <div class="project-meta">
+          <span class="badge">Azure</span>
+          <span class="badge">Data Factory</span>
+          <span class="badge">Data Lake</span>
+          <span class="badge">Synapse</span>
+        </div>
+
+        <div class="project-grid">
+          <article class="card-subtle">
+            <h3>Pipeline Flow</h3>
+            <ul>
+              <li>Linked services to on-prem SQL / APIs and Azure Data Lake.</li>
+              <li>Copy activities to move data into ADLS landing zone.</li>
+              <li>Data flows / notebooks for transformations and joins.</li>
+              <li>Curated data stored in Delta / Parquet format.</li>
+              <li>Synapse / SQL Dedicated Pool used for serving layer.</li>
+            </ul>
+          </article>
+
+          <aside class="card-subtle">
+            <h3>Features</h3>
+            <ul>
+              <li>Parameterised pipelines to handle multiple tables.</li>
+              <li>Config-driven metadata (source, target, keys).</li>
+              <li>Triggers for daily schedule and manual runs.</li>
+              <li>Monitoring via ADF UI and Azure Monitor.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="project-grid" style="margin-top:2rem;">
+          <article class="card-subtle">
+            <h3>Key Learnings</h3>
+            <ul>
+              <li>Designing ADF pipelines for maintainability and reuse.</li>
+              <li>Managing credentials with Key Vault.</li>
+              <li>Balancing cost vs. performance for compute choices.</li>
+            </ul>
+          </article>
+
+          <aside class="card-subtle">
+            <h3>Tech Stack</h3>
+            <ul>
+              <li>Azure Data Factory</li>
+              <li>Azure Data Lake Storage</li>
+              <li>Azure Synapse / SQL DB</li>
+              <li>Azure Monitor / Log Analytics</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Satyam Gautam.</p>
+    </div>
+  </footer>
+</body>
+</html>

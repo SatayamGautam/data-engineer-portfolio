@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Satyam Gautam | Data Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-surface">
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">SG<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">Data Engineer · Big Data · Cloud</p>
+        <h1>Hi, I'm <span class="accent">Satyam Gautam</span></h1>
+        <p class="hero-subtitle">
+          I design and build scalable data pipelines using <strong>PySpark</strong>,
+          <strong>AWS</strong>, <strong>Azure Data Factory</strong>, <strong>Airflow</strong>,
+          and <strong>SQL</strong> to turn raw data into reliable insights.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost"
+             href="https://www.linkedin.com/in/satayam-gautam-498a11193"
+             target="_blank" rel="noreferrer">
+            View LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p class="hero-card-title">Current Focus</p>
+        <ul>
+          <li>Efficient PySpark jobs & DAG optimization</li>
+          <li>End-to-end ETL on AWS (S3, Glue, Redshift)</li>
+          <li>Azure Data Factory pipelines</li>
+          <li>Airflow-based orchestration</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <p class="section-text">
+        I'm a data engineering enthusiast with hands-on experience building
+        ETL/ELT workflows, optimizing Spark jobs, and working with cloud
+        platforms like <strong>AWS</strong> and <strong>Azure</strong>.
+        I enjoy solving real-world data problems such as incremental loads,
+        schema evolution, and performance tuning.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section bg-alt">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+        <span class="chip">PySpark</span>
+        <span class="chip">Spark Optimization</span>
+        <span class="chip">AWS (S3, Glue, Lambda, Redshift)</span>
+        <span class="chip">Azure Data Factory</span>
+        <span class="chip">Apache Airflow</span>
+        <span class="chip">ETL / ELT Pipelines</span>
+        <span class="chip">Data Warehousing</span>
+        <span class="chip">CI/CD Basics</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="grid">
+        <a href="project-aws-realtime-etl.html" class="card">
+          <p class="card-tag">AWS · Real-time</p>
+          <h3 class="card-title">Real-Time ETL Pipeline on AWS</h3>
+          <p class="card-text">
+            Streaming ingest to S3, transformation with Glue, and loading into
+            Redshift for near real-time analytics.
+          </p>
+          <p class="card-link">View project →</p>
+        </a>
+
+        <a href="project-pyspark-batch.html" class="card">
+          <p class="card-tag">PySpark · Batch</p>
+          <h3 class="card-title">PySpark Batch Processing System</h3>
+          <p class="card-text">
+            Large-scale batch jobs with optimized joins, partitioning, and data
+            skew handling for faster processing.
+          </p>
+          <p class="card-link">View project →</p>
+        </a>
+
+        <a href="project-airflow-incremental.html" class="card">
+          <p class="card-tag">Airflow · Orchestration</p>
+          <h3 class="card-title">Airflow Incremental Load DAG</h3>
+          <p class="card-text">
+            End-to-end incremental data loads with retry logic, alerts, and
+            data quality checks.
+          </p>
+          <p class="card-link">View project →</p>
+        </a>
+
+        <a href="project-azure-adf-pipeline.html" class="card">
+          <p class="card-tag">Azure · ADF</p>
+          <h3 class="card-title">Azure Data Factory Pipeline</h3>
+          <p class="card-text">
+            Orchestrated ingestion from on-prem sources to Azure Data Lake and
+            Synapse using ADF.
+          </p>
+          <p class="card-link">View project →</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-alt">
+    <div class="container contact-inner">
+      <div>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-text">
+          Interested in collaborating or hiring for a data engineering role?
+          Feel free to reach out.
+        </p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn primary"
+           href="mailto:gautamsatyam@gmail.com?subject=Data%20Engineering%20Opportunity">
+          Email Me
+        </a>
+        <a class="btn ghost"
+           href="https://www.linkedin.com/in/satayam-gautam-498a11193"
+           target="_blank" rel="noreferrer">
+          Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Satyam Gautam. All rights reserved.</p>
+      <p class="footer-sub">
+        Built with plain HTML, CSS & JS · Deployed on GitHub Pages
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

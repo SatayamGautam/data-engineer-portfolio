@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Airflow Incremental Load DAG | Satyam Gautam</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body class="bg-surface">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">SG<span>.</span></a>
+      <nav class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle">☰</button>
+    </div>
+  </header>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="index.html#about">About</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section class="project-hero">
+      <div class="container">
+        <h1 class="project-title">Airflow DAG for Incremental Loads</h1>
+        <p class="section-text">
+          An Apache Airflow workflow that performs incremental loads from a
+          source system into a data warehouse with retry logic, data quality
+          checks, and notifications.
+        </p>
+        <div class="project-meta">
+          <span class="badge">Apache Airflow</span>
+          <span class="badge">Incremental Load</span>
+          <span class="badge">Orchestration</span>
+        </div>
+
+        <div class="project-grid">
+          <article class="card-subtle">
+            <h3>DAG Design</h3>
+            <ul>
+              <li>Daily schedule with configurable execution date.</li>
+              <li>Task to fetch watermark / last-loaded timestamp.</li>
+              <li>Extract only new/updated records from the source.</li>
+              <li>Stage data into a landing table.</li>
+              <li>Merge into target table using UPSERT logic.</li>
+              <li>Run data quality checks (row counts, null checks).</li>
+            </ul>
+          </article>
+
+          <aside class="card-subtle">
+            <h3>Reliability</h3>
+            <ul>
+              <li>Enabled retries and exponential backoff on critical tasks.</li>
+              <li>Used task dependencies to enforce proper ordering.</li>
+              <li>Configured email/Slack alerts on failures.</li>
+              <li>Backfill support through Airflow's CLI.</li>
+            </ul>
+          </aside>
+        </div>
+
+        <div class="project-grid" style="margin-top:2rem;">
+          <article class="card-subtle">
+            <h3>Key Learnings</h3>
+            <ul>
+              <li>Designing idempotent DAGs that can be safely re-run.</li>
+              <li>Managing backfills and catchup vs. no-catchup workflows.</li>
+              <li>Using XCom / Variables to pass incremental watermark values.</li>
+            </ul>
+          </article>
+
+          <aside class="card-subtle">
+            <h3>Tech Stack</h3>
+            <ul>
+              <li>Apache Airflow</li>
+              <li>Python operators / SQL operators</li>
+              <li>PostgreSQL / Data warehouse target</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Satyam Gautam.</p>
+    </div>
+  </footer>
+</body>
+</html>

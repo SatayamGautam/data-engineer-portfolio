@@ -1,97 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PySpark Batch Processing | Satyam Gautam</title>
+  <title>PySpark Batch Processing</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
-<body class="bg-surface">
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">SG<span>.</span></a>
-      <nav class="nav-links">
-        <a href="index.html#about">About</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-      <button class="nav-toggle" id="navToggle">☰</button>
+
+<body class="body-root">
+
+<section class="section">
+  <div class="container">
+    <h1>PySpark Batch Processing</h1>
+    <p class="muted">Large-scale batch ETL using Apache Spark.</p>
+
+    <h2>Problem</h2>
+    <p>
+      Processing large datasets caused data skew, slow joins
+      and high execution times.
+    </p>
+
+    <h2>Solution</h2>
+    <p>
+      Optimised Spark jobs using salting, broadcast joins,
+      partition tuning and caching.
+    </p>
+
+    <h2>Tech Stack</h2>
+    <p>PySpark · Spark SQL · HDFS / S3 · Python</p>
+
+    <h2>Outcome</h2>
+    <ul>
+      <li>Reduced job runtime significantly</li>
+      <li>Improved cluster resource utilisation</li>
+      <li>Stable performance on large datasets</li>
+    </ul>
+
+    <div class="project-links">
+      <a class="btn btn-primary" href="https://github.com/SatayamGautam" target="_blank">
+        View GitHub
+      </a>
     </div>
-  </header>
-  <nav class="nav-mobile" id="navMobile">
-    <a href="index.html#about">About</a>
-    <a href="index.html#skills">Skills</a>
-    <a href="index.html#projects">Projects</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
+  </div>
+</section>
 
-  <main>
-    <section class="project-hero">
-      <div class="container">
-        <h1 class="project-title">PySpark Batch Processing System</h1>
-        <p class="section-text">
-          A batch processing workflow using PySpark to transform large volumes
-          of data with optimised joins, partitioning, and data skew handling.
-        </p>
-        <div class="project-meta">
-          <span class="badge">PySpark</span>
-          <span class="badge">Spark</span>
-          <span class="badge">Data Skew</span>
-          <span class="badge">Performance Tuning</span>
-        </div>
-
-        <div class="project-grid">
-          <article class="card-subtle">
-            <h3>Pipeline Flow</h3>
-            <ol>
-              <li>Read raw data from a data lake (S3 / HDFS) into Spark DataFrames.</li>
-              <li>Applied cleansing, type casting and standardisation.</li>
-              <li>Used broadcast joins and bucketing where applicable.</li>
-              <li>Handled data skew using salting and custom repartitioning.</li>
-              <li>Wrote output into partitioned Parquet tables.</li>
-            </ol>
-          </article>
-
-          <aside class="card-subtle">
-            <h3>Optimisations</h3>
-            <ul>
-              <li>Enabled predicate pushdown and selected only necessary columns.</li>
-              <li>Adjusted shuffle partitions based on data size.</li>
-              <li>Used <code>explain()</code> and Spark UI to analyse DAG & stages.</li>
-              <li>Configured executor memory and cores for better utilisation.</li>
-            </ul>
-          </aside>
-        </div>
-
-        <div class="project-grid" style="margin-top:2rem;">
-          <article class="card-subtle">
-            <h3>Key Learnings</h3>
-            <ul>
-              <li>How to identify bottlenecks from Spark UI and DAG.</li>
-              <li>Practical techniques for handling skewed keys in joins.</li>
-              <li>Designing partition strategy for read-heavy analytics.</li>
-            </ul>
-          </article>
-
-          <aside class="card-subtle">
-            <h3>Tech Stack</h3>
-            <ul>
-              <li>Python, PySpark</li>
-              <li>S3 / HDFS</li>
-              <li>Parquet, Hive-style tables</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Satyam Gautam.</p>
-    </div>
-  </footer>
 </body>
 </html>

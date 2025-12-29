@@ -3,175 +3,128 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Satyam Gautam — Data Engineer specialising in PySpark, AWS, Airflow, and scalable ETL pipelines." />
+  <meta name="description" content="Satyam Gautam — Data Engineer | PySpark, AWS, Airflow" />
   <title>Satyam Gautam — Data Engineer</title>
 
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("mobileMenuBtn");
+      const nav = document.getElementById("mobileNav");
+
+      btn.addEventListener("click", () => {
+        const isHidden = nav.getAttribute("aria-hidden") === "true";
+        nav.setAttribute("aria-hidden", !isHidden);
+      });
+    });
+  </script>
 </head>
 
 <body class="body-root">
 
-  <!-- NAVBAR -->
-  <header class="site-header">
-    <div class="container header-inner">
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
 
-      <!-- Desktop navigation -->
-      <nav class="desktop-nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="header-actions">
-        <a class="btn btn-outline" href="https://github.com/SatyamGautam" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn btn-primary" href="https://www.linkedin.com/in/satayam-gautam-498a11193/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
-      </div>
-    </div>
-
-    <!-- Mobile nav -->
-    <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <nav class="desktop-nav">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
-      <div class="mobile-footer-links">
-        <a href="https://github.com/SatyamGautam" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/satayam-gautam-498a11193/" target="_blank" rel="noreferrer">LinkedIn</a>
-      </div>
     </nav>
-  </header>
 
-  <!-- HERO -->
-  <main>
-    <section class="hero">
-      <div class="hero-bg"></div>
-
-      <div class="container hero-inner">
-        <div class="hero-left">
-          <p class="eyebrow">Data Engineer · PySpark · AWS · Airflow</p>
-          <h1 class="hero-title">I build reliable, scalable data pipelines.</h1>
-
-          <p class="hero-lead">
-            Designing ETL/ELT systems with PySpark, AWS Glue, Redshift, Azure Data Factory and Airflow — focused on performance, reliability and observability.
-          </p>
-
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-ghost" href="mailto:satayamgautam@gmail.com?subject=Data%20Engineering%20Opportunity">Email Me</a>
-          </div>
-
-          <ul class="hero-highlights">
-            <li><strong>Optimised Spark jobs</strong> — joins, salting, partitioning</li>
-            <li><strong>End-to-end ETL</strong> — AWS Glue / Lambda / Redshift</li>
-            <li><strong>Orchestration</strong> — Airflow DAGs, monitoring & alerts</li>
-          </ul>
-        </div>
-
-        <aside class="hero-card">
-          <div class="card-content">
-            <h3 class="card-title">Current Focus</h3>
-            <p class="card-text">
-              Building observable pipelines, improving Spark performance and automating incremental loads.
-            </p>
-
-            <div class="card-list">
-              <div class="card-item"><strong>Tech:</strong> PySpark · AWS · ADF · Airflow</div>
-              <div class="card-item"><strong>Scale:</strong> TB/day processing, partitioned Parquet</div>
-              <div class="card-item"><strong>Practices:</strong> CI/CD, Monitoring, Cost optimisation</div>
-            </div>
-
-            <a class="btn btn-outline card-cta" href="#contact">Let’s talk</a>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About</h2>
-        <p class="muted">
-          I’m Satyam — a data engineer focused on building maintainable, efficient and observable pipelines.
-          I enjoy solving problems around incremental loads, schema evolution and data skew.
-        </p>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section alt">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="chips">
-          <span>Python</span>
-          <span>SQL</span>
-          <span>PySpark</span>
-          <span>AWS</span>
-          <span>Azure Data Factory</span>
-          <span>Airflow</span>
-          <span>ETL / ELT</span>
-          <span>Data Warehousing</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
-
-        <div class="projects-grid">
-          <a class="proj-card" href="project-aws-realtime-etl.html">
-            <div class="proj-tag">AWS · Real-time</div>
-            <h3>Real-Time ETL Pipeline</h3>
-            <p>Streaming ingest to S3, Glue transforms and Redshift analytics.</p>
-          </a>
-
-          <a class="proj-card" href="project-pyspark-batch.html">
-            <div class="proj-tag">PySpark · Batch</div>
-            <h3>PySpark Batch Processing</h3>
-            <p>Optimised joins, salting and partitioning for large-scale ETL jobs.</p>
-          </a>
-
-          <a class="proj-card" href="project-airflow-incremental.html">
-            <div class="proj-tag">Airflow</div>
-            <h3>Incremental Load DAG</h3>
-            <p>Idempotent DAGs with watermarking, tests and alerts.</p>
-          </a>
-
-          <a class="proj-card" href="project-azure-adf-pipeline.html">
-            <div class="proj-tag">Azure</div>
-            <h3>ADF Ingestion Pipeline</h3>
-            <p>Parameterised pipelines with Synapse integration.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section alt">
-      <div class="container contact-row">
-        <div>
-          <h2>Contact</h2>
-          <p class="muted">Interested in collaborating or hiring for a data engineering role?</p>
-        </div>
-
-        <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:satayamgautam@gmail.com?subject=Opportunity">Email Me</a>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/in/satayam-gautam-498a11193/" target="_blank">LinkedIn</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p class="muted">© <span id="year"></span> Satyam Gautam</p>
+    <div class="header-actions">
+      <a class="btn btn-outline" href="https://github.com/SatayamGautam" target="_blank">GitHub</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/in/satayam-gautam-498a11193/" target="_blank">LinkedIn</a>
+      <button id="mobileMenuBtn" class="mobile-menu-btn">☰</button>
     </div>
-  </footer>
+  </div>
+
+  <!-- MOBILE NAV -->
+  <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<main>
+<section class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="container hero-inner">
+    <div>
+      <p class="eyebrow">DATA ENGINEER · PYSPARK · AWS · AIRFLOW</p>
+      <h1>I build reliable, scalable data pipelines.</h1>
+      <p class="hero-lead">
+        Designing ETL/ELT systems with PySpark, AWS Glue, Redshift,
+        Azure Data Factory and Airflow.
+      </p>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-ghost" href="mailto:satayamgautam@gmail.com">Email Me</a>
+      </div>
+
+      <ul class="hero-highlights">
+        <li>Optimised Spark jobs — joins, salting, partitioning</li>
+        <li>End-to-end ETL — AWS Glue / Lambda / Redshift</li>
+        <li>Orchestration — Airflow DAGs, monitoring & alerts</li>
+      </ul>
+    </div>
+
+    <aside class="hero-card">
+      <h3>Current Focus</h3>
+      <p>
+        Building observable pipelines, improving Spark performance and
+        automating incremental loads.
+      </p>
+
+      <p><strong>Tech:</strong> PySpark · AWS · ADF · Airflow</p>
+      <p><strong>Scale:</strong> TB/day processing</p>
+      <p><strong>Practices:</strong> CI/CD, Monitoring</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <h2>About</h2>
+    <p class="muted">
+      I’m a data engineer focused on building maintainable, efficient
+      and observable pipelines.
+    </p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section alt">
+  <div class="container chips">
+    <span>Python</span><span>SQL</span><span>PySpark</span>
+    <span>AWS</span><span>ADF</span><span>Airflow</span>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container projects-grid">
+    <div class="proj-card">AWS Real-Time ETL Pipeline</div>
+    <div class="proj-card">PySpark Batch Processing</div>
+    <div class="proj-card">Airflow Incremental Loads</div>
+    <div class="proj-card">Azure ADF Pipeline</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section alt">
+  <div class="container">
+    <a class="btn btn-primary" href="mailto:satayamgautam@gmail.com">Contact Me</a>
+  </div>
+</section>
+</main>
 
 </body>
 </html>

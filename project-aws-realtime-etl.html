@@ -1,104 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AWS Real-Time ETL Pipeline | Satyam Gautam</title>
+  <title>AWS Real-Time ETL Pipeline</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
-<body class="bg-surface">
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="logo">SG<span>.</span></a>
-      <nav class="nav-links">
-        <a href="index.html#about">About</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-      <button class="nav-toggle" id="navToggle">☰</button>
-    </div>
-  </header>
-  <nav class="nav-mobile" id="navMobile">
-    <a href="index.html#about">About</a>
-    <a href="index.html#skills">Skills</a>
-    <a href="index.html#projects">Projects</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
 
-  <main>
-    <section class="project-hero">
-      <div class="container">
-        <h1 class="project-title">Real-Time ETL Pipeline on AWS</h1>
-        <p class="section-text">
-          A streaming data pipeline that ingests events in near real-time,
-          lands them in S3, applies transformations using AWS Glue, and loads
-          curated data into Redshift for analytics and dashboards.
-        </p>
-        <div class="project-meta">
-          <span class="badge">AWS</span>
-          <span class="badge">S3</span>
-          <span class="badge">Lambda</span>
-          <span class="badge">Glue</span>
-          <span class="badge">Redshift</span>
-          <span class="badge">Streaming ETL</span>
-        </div>
+<body class="body-root">
 
-        <div class="project-grid">
-          <article class="card-subtle">
-            <h3>Architecture Overview</h3>
-            <ul>
-              <li>Source events (e.g. app logs, transactions) pushed to an API / stream.</li>
-              <li>AWS Lambda validates and writes raw data to an S3 <em>landing</em> bucket.</li>
-              <li>AWS Glue jobs perform schema enforcement and transformations.</li>
-              <li>Curated data written to S3 <em>processed</em> zone in partitioned format.</li>
-              <li>Redshift COPY commands (or Glue ETL) load curated data into fact/dim tables.</li>
-              <li>Downstream BI tools connect to Redshift for near real-time dashboards.</li>
-            </ul>
-          </article>
+<section class="section">
+  <div class="container">
+    <h1>AWS Real-Time ETL Pipeline</h1>
+    <p class="muted">Streaming ingestion, transformation and analytics on AWS.</p>
 
-          <aside class="card-subtle">
-            <h3>Responsibilities</h3>
-            <ul>
-              <li>Designed S3 data layout (landing / raw / processed zones).</li>
-              <li>Implemented Glue jobs using PySpark for transformations.</li>
-              <li>Handled schema evolution and bad records via quarantine bucket.</li>
-              <li>Optimised Redshift COPY and distribution/sort keys.</li>
-              <li>Added CloudWatch alarms & metrics for pipeline monitoring.</li>
-            </ul>
-          </aside>
-        </div>
+    <h2>Problem</h2>
+    <p>
+      Business needed near real-time analytics on continuously arriving data.
+      Batch pipelines were slow and did not support timely insights.
+    </p>
 
-        <div class="project-grid" style="margin-top:2rem;">
-          <article class="card-subtle">
-            <h3>Key Learnings</h3>
-            <ul>
-              <li>How to design near real-time ETL with decoupled components.</li>
-              <li>Partitioning strategy in S3 to balance query performance and small files.</li>
-              <li>Using Glue job bookmarks for incremental processing.</li>
-            </ul>
-          </article>
-
-          <aside class="card-subtle">
-            <h3>Tech Stack</h3>
-            <ul>
-              <li>AWS Lambda, API Gateway</li>
-              <li>Amazon S3</li>
-              <li>AWS Glue (PySpark)</li>
-              <li>Amazon Redshift</li>
-              <li>CloudWatch (logs & alarms)</li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Satyam Gautam.</p>
-    </div>
-  </footer>
-</body>
-</html>
+    <h2>Architecture</h2>
+    <ul>

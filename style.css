@@ -101,3 +101,12 @@ body{
   .desktop-nav{display:none;}
   .mobile-menu-btn{display:block;}
 }
+.project-links,
+.proj-links{
+  margin-top:14px;
+  display:flex;
+  gap:14px;
+  font-size:0.8rem;
+  color:var(--accent2);
+}
+
